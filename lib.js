@@ -1,12 +1,17 @@
-function lib(title,author,numberOfPages,isRead){
-    this.title = title ;
-    this.numberOfPages = numberOfPages;
+function Book(title, author, pages, isRead) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
     this.isRead = isRead;
-    this.info = function(){
-        return `${this.title} by ${this.author}, ${this.pages} pages, ${this.isRead ? "read" : "not yet read"};
-         `
-    }
-const thehobbit = new lib("The Hobbit","J.R Tolkien",295,false);
+  
+    this.info = function() {
+      return `${this.title} by ${this.author}, ${this.pages} pages, ${this.isRead ? "read" : "not read yet"}`;
+    };
+  }
+  
+// Create a Book object
+const theHobbit = new Book("The Hobbit", "J.R.R. Tolkien", 295, false);
 
-console.log(thehobbit.info());
-console.log("working")
+// Call the info function and log the result
+console.log(theHobbit.info()); // Output: "The Hobbit by J.R.R. Tolkien, 295 pages, not read yet"
+  
