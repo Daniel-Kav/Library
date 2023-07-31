@@ -43,4 +43,5 @@ display: none;
     display: grid;
     grid-template-columns: 1fr;
     grid-area: auto;
+    display: none;
 }
