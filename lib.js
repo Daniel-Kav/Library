@@ -76,7 +76,7 @@ bookForm.addEventListener('submit', (event) => {
   addBookToLibrary(title, author, pages, read);
   displayBooks();
   bookForm.reset();
-  addBookForm.classList.add('hidden');
+  addBookForm.classList.add('hidden');;
 });
 
 // Example: manually adding some books to the library
