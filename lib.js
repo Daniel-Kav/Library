@@ -1,13 +1,10 @@
-let myLibrary = [];
+// lib.js
 
-function Book(){
-
-}
-
-function addBookToLibrary(){
-
-} 
-let newBookButton = document.getElementById("new-boook-btn");
-newBookButton.addEventListener("click",function(){
-    alert("hello motherfuckre")
-})
+document.addEventListener("DOMContentLoaded", function() {
+    let newBookButton = document.getElementById("new-book-button");
+  
+    newBookButton.addEventListener("click", function() {
+      alert("Button was clicked!");
+    });
+  });
+  
