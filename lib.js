@@ -12,7 +12,10 @@ function addBookToLibrary(){
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
-    let read = document.getElementById('read').value;
+    let read = document.getElementById('read').checked;
+    let nwBook = new Book(title, author, pages, read);
+    console.log(nwBook);
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -23,4 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
       newBookForm.style.display = "block"; 
     });
   });
-  
+
+document.querySelector("#new-book-form").addEventListener("submit", funtion{
+  event.preventDefault();
+  addBookToLibrary())
+}
