@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-document.querySelector("#new-book-form").addEventListener("submit", funtion{
+document.querySelector("#new-book-form").addEventListener("submit", function{
   event.preventDefault();
-  addBookToLibrary())
-}
+  addBookToLibrary()
+})
