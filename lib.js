@@ -18,16 +18,13 @@ function addBookToLibrary(){
 
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-    let newBookButton = document.getElementById("new-book-button");
-  
-    newBookButton.addEventListener("click", function() {
-      let newBookForm = document.getElementById("new-book-form");
-      newBookForm.style.display = "block"; 
-    });
-  });
+let newBookbtn = document.getElementById("new-book-btn");
+newBookbtn.addEventListener("click",function(){
+  let newBookForm = document.getElementById("new-book-form");
+  newBookForm.style.display = "block";
+})
 
-document.querySelector("#new-book-form").addEventListener("submit", function{
+document.querySelector("#new-book-form").addEventListener("submit", function(){
   event.preventDefault();
   addBookToLibrary()
 })
