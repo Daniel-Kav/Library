@@ -18,7 +18,7 @@ function addBookToLibrary(){
 
 }
 
-let newBookbtn = document.getElementById("new-book-btn");
+let newBookbtn = document.getElementById("new-book-button");
 newBookbtn.addEventListener("click",function(){
   let newBookForm = document.getElementById("new-book-form");
   newBookForm.style.display = "block";
