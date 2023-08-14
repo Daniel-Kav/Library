@@ -13,8 +13,9 @@ function addBookToLibrary(){
     let author = document.getElementById('author').value;
     let pages = document.getElementById('pages').value;
     let read = document.getElementById('read').checked;
-    let nwBook = new Book(title, author, pages, read);
-    console.log(nwBook);
+    let nwBook = new Book(title, pages, read, author);
+    myLibrary.push(nwBook);
+    console.log(myLibrary);
 
 }
 
@@ -24,7 +25,7 @@ newBookbtn.addEventListener("click",function(){
   newBookForm.style.display = "block";
 })
 
-document.querySelector("#new-book-form").addEventListener("submit", function(){
+document.querySelector("#new-book-form").addEventListener("submit", function(event){
   event.preventDefault();
   addBookToLibrary()
 })
