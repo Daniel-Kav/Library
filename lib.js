@@ -8,16 +8,22 @@ function Book(title,pages,read,author){
   this.author = author;
 }
 
-function render(){
-  let ulEl = document.getElementById("library");
-  ulEl.innerHTML = "";
-  for(let i = 0; i < myLibrary.length; i++){
-    let liEl = document.createElement("li");
-    liEl.textContent = myLibrary[i].title;
-    liEl.textcontent = myLibrary[i].author;
-    ulEl.appendChild(liEl);
+function render() {
+  let libraryBook = document.getElementById("library");
+  libraryBook.innerHTML = ''; // Clear the container before rendering
+
+  for (let i = 0; i < myLibrary.length; i++) {
+    let bookElement = document.createElement("div");
+    bookElement.innerHTML = `
+      <p>Title: ${myLibrary[i].title}</p>
+      <p>Author: ${myLibrary[i].author}</p>
+      <p>Pages: ${myLibrary[i].pages}</p>
+      <p>Read: ${myLibrary[i].read ? 'Yes' : 'No'}</p>
+    `;
+    libraryBook.appendChild(bookElement);
   }
 }
+
 function addBookToLibrary(){
     let title = document.getElementById('title').value;
     let author = document.getElementById('author').value;
